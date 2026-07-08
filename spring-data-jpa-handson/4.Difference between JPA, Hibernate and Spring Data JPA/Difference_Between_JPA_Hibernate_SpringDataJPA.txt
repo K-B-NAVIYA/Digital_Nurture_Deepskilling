@@ -1,0 +1,26 @@
+JPA
+- Specification for ORM.
+- Defines annotations and APIs.
+- No implementation.
+
+Hibernate
+- ORM framework.
+- Implements JPA.
+- Handles persistence.
+
+Spring Data JPA
+- Built on top of JPA.
+- Reduces boilerplate code.
+- Uses repositories.
+- Transaction management.
+
+Hibernate Example:
+
+Session session = factory.openSession();
+Transaction tx = session.beginTransaction();
+session.save(employee);
+tx.commit();
+
+Spring Data JPA Example:
+
+employeeRepository.save(employee);
