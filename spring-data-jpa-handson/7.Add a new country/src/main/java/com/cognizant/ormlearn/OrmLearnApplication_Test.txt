@@ -1,0 +1,16 @@
+private static void testAddCountry() throws CountryNotFoundException {
+
+    LOGGER.info("Start");
+
+    Country country = new Country();
+    country.setCode("NP");
+    country.setName("Nepal");
+
+    countryService.addCountry(country);
+
+    Country result = countryService.findCountryByCode("NP");
+
+    LOGGER.debug("Country: {}", result);
+
+    LOGGER.info("End");
+}
