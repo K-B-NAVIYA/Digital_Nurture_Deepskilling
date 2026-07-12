@@ -1,0 +1,13 @@
+private static void getAllCountriesTest() throws CountryNotFoundException {
+
+    LOGGER.info("Start");
+
+    Country country = countryService.findCountryByCode("IN");
+
+    LOGGER.debug("Country:{}", country);
+
+    LOGGER.info("End");
+}
+
+// Call inside main():
+getAllCountriesTest();
