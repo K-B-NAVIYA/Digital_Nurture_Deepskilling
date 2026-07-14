@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:util="http://www.springframework.org/schema/util"
+xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util https://www.springframework.org/schema/util/spring-util.xsd">
+<bean id="dept1" class="com.cognizant.springlearn.model.Department"><constructor-arg value="1"/><constructor-arg value="HR"/></bean>
+<bean id="dept2" class="com.cognizant.springlearn.model.Department"><constructor-arg value="2"/><constructor-arg value="IT"/></bean>
+<bean id="skill1" class="com.cognizant.springlearn.model.Skill"><constructor-arg value="1"/><constructor-arg value="Java"/></bean>
+<bean id="emp1" class="com.cognizant.springlearn.model.Employee"><constructor-arg value="1"/><constructor-arg value="John"/><constructor-arg value="50000"/><constructor-arg value="true"/></bean>
+<bean id="emp2" class="com.cognizant.springlearn.model.Employee"><constructor-arg value="2"/><constructor-arg value="Priya"/><constructor-arg value="60000"/><constructor-arg value="true"/></bean>
+<util:list id="employeeList"><ref bean="emp1"/><ref bean="emp2"/></util:list>
+</beans>
