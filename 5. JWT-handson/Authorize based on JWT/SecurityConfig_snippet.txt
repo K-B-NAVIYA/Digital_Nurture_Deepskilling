@@ -1,0 +1,7 @@
+// Configure HttpSecurity
+httpSecurity.csrf().disable().httpBasic().and()
+.authorizeRequests()
+.antMatchers("/authenticate").hasAnyRole("USER","ADMIN")
+.anyRequest().authenticated()
+.and()
+.addFilter(new JwtAuthorizationFilter(authenticationManager()));
